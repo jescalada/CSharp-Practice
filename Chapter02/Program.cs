@@ -19,11 +19,6 @@ namespace Chapter02
             string text = "interpolated strings";
             Console.WriteLine(
                 $"Behold! The power of {text}! The variable {nameof(text)} is of type {text.GetType()}.");
-            
-            uint naturalNumber = 123;
-            int integerNumer = -123;
-            float realNumber = 2.3F;
-            double anotherRealNumber = 2.3;
 
             int decimalNotation = 2_000_000;
             int binaryNotation = 0b_0001_1110_1000_0100_1000_0000;
@@ -33,6 +28,14 @@ namespace Chapter02
             Console.WriteLine($"{decimalNotation == binaryNotation}");
             Console.WriteLine(
             $"{decimalNotation == hexadecimalNotation}");
+
+            int? thisCouldBeNull = null;
+            Console.WriteLine(thisCouldBeNull);
+            Console.WriteLine(thisCouldBeNull.GetValueOrDefault());
+
+            thisCouldBeNull = 7;
+            Console.WriteLine(thisCouldBeNull);
+            Console.WriteLine(thisCouldBeNull.GetValueOrDefault());
         }
     }
 }
